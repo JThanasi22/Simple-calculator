@@ -7,27 +7,35 @@ void calMul (int n1, int n2);
 void calDiv (int n1, int n2);
 void calPow (int n1, int n2);
 void calSqrt (int n1);
+void calave (int n, int arr[]);
 int main()
 {
     char o;
     int n1, n2, n;
     printf ("Choose an operator(+, -, *, /, ^, 's'=sqrt)\n");
     scanf ("%c", &o);
-    printf ("First number: ");
-    scanf(" %d", &n1);
-    if( o=='^')
-    {
-        printf("Value of the power: ");
-        scanf(" %d", &n2);
-    }
-    else if (o=='s')
+    if(o=='a')
     {
         
     }
     else
     {
-        printf ("Second number: ");
-        scanf (" %d", &n2);
+        printf ("First number: ");
+        scanf(" %d", &n1);
+        if( o=='^')
+        {
+            printf("Value of the power: ");
+            scanf(" %d", &n2);
+        }
+        else if (o=='s')
+        {
+            
+        }
+        else
+        {
+            printf ("Second number: ");
+            scanf (" %d", &n2);
+        }
     }
     switch(o)
     {
@@ -54,6 +62,15 @@ int main()
         case 's':
             calSqrt (n1);
             break;
+        
+        case 'a':
+        {
+            printf("Enter the number of values: ");
+            scanf("%d", &n);
+            int arr[n];
+            calave (n, arr);
+            break;
+        }
             
         default:
             printf ("Error");
@@ -103,4 +120,15 @@ void calSqrt (int n1)
     float x;
     x=sqrtf(n1*1.0);
     printf ("%.2f", x);
+}
+void calave (int n, int arr[])
+{
+    float sum=0;
+    printf("Enter the values:\n");
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d", &arr[i]);
+        sum=sum+arr[i];
+    }
+    printf("%.2f", sum/(n*1.0));
 }
