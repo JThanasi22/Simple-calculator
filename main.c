@@ -7,7 +7,7 @@ void calMul (int n1, int n2);
 void calDiv (int n1, int n2);
 void calPow (int n1, int n2);
 void calSqrt (int n1);
-void calave (int n, int arr[]);
+void calave ();
 int main()
 {
     char o;
@@ -64,10 +64,7 @@ int main()
             
             case 'a':
             {
-                printf("Enter the number of values");
-                scanf("%d", &n);
-                int arr[n];
-                calave (n, arr);
+                calave ();
                 break;
             }
             
@@ -120,13 +117,17 @@ void calSqrt (int n1)
     x=sqrtf(n1*1.0);
     printf ("%.2f", x);
 }
-void calave (int n, int arr[])
+void calave ()
 {
     float sum=0;
-    for(int i=0;i<n;i++)
+    int a, cnt=0;
+    printf("Enter '0' to terminate");
+    scanf("%d", a);
+    while(a!=0)
     {
-        scanf("%d", &arr[i]);
-        sum=sum+arr[i];
+        sum=sum+a;
+        cnt++;
+        scanf("%d", a);
     }
-    printf("%.2lf", sum/(n*1.0));
+    printf("%.2lf", sum/(cnt*1.0));
 }
