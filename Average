@@ -12,7 +12,7 @@ int main()
 {
     char o;
     int n1, n2, n;
-    printf ("Choose an operator(+, -, *, /, ^, 's'=sqrt)\n");
+    printf ("Choose an operator(+, -, *, /, ^, 's'=sqrt, 'a'=average)\n");
     scanf ("%c", &o);
     if(o=='a')
     {
