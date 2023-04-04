@@ -14,7 +14,6 @@ void calMul (int n1, int n2);
 void calDiv (int n1, int n2);
 void calPow (int n1, int n2);
 void calSqrt (int n1);
-void calAve (int n1, int n2);
 int main()
 {
     char o;
@@ -63,10 +62,7 @@ int main()
             case 's':
                 calSqrt (n1);
                 break;
-            case 'a':
-                calAve (n1, n2);
-                break;
-            
+          
             default:
                 printf ("Error");
         }
