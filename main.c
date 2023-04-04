@@ -1,10 +1,3 @@
-//
-//  main.c
-//  calculator
-//
-//  Created by Jord Thanasi on 30.3.23.
-//
-
 #include <stdio.h>
 #include <math.h>
 
