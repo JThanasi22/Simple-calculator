@@ -1,10 +1,3 @@
-//
-//  main.c
-//  Simple calculator
-//
-//  Created by Jord Thanasi on 4.4.23.
-//
-
 #include <stdio.h>
 #include <math.h>
 
@@ -20,57 +13,51 @@ int main()
     int n1, n2, n;
     printf ("Choose an operator(+, -, *, /, ^, 's'=sqrt)\n");
     scanf ("%c", &o);
-    if (o=='a')
+    printf ("First number: ");
+    scanf(" %d", &n1);
+    if( o=='^')
+    {
+        printf("Value of the power: ");
+        scanf(" %d", &n2);
+    }
+    else if (o=='s')
     {
         
     }
     else
     {
-        printf ("First number: ");
-        scanf(" %d", &n1);
-        if( o=='^')
-        {
-            printf("Value of the power: ");
-            scanf(" %d", &n2);
-        }
-        else if (o=='s')
-        {
-        }
-        else
-        {
-            printf ("Second number: ");
-            scanf (" %d", &n2);
-        }
+        printf ("Second number: ");
+        scanf (" %d", &n2);
     }
-        switch(o)
-        {
-            case '+':
-                calSum (n1, n2);
-                break;
+    switch(o)
+    {
+        case '+':
+            calSum (n1, n2);
+            break;
               
-            case '-':
-                cALDiff (n1, n2);
-                break;
+        case '-':
+            cALDiff (n1, n2);
+            break;
                   
-            case '*':
-                calMul (n1, n2);
-                break;
+        case '*':
+            calMul (n1, n2);
+            break;
               
-            case '/':
-                calDiv (n1, n2);
-                break;
+        case '/':
+            calDiv (n1, n2);
+            break;
             
-            case '^':
-                calPow (n1, n2);
-                break;
+        case '^':
+            calPow (n1, n2);
+            break;
             
-            case 's':
-                calSqrt (n1);
-                break;
+        case 's':
+            calSqrt (n1);
+            break;
             
-            default:
-                printf ("Error");
-        }
+        default:
+            printf ("Error");
+    }
     return 0;
 }
 void calSum (int n1, int n2)
